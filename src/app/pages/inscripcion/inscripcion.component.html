@@ -1,0 +1,13 @@
+<div class="form">
+    <table border="1">
+        <tr>
+            <td>
+                <app-listado-materia></app-listado-materia>
+            </td>
+            <td>
+                <label><strong>LISTADO ALUMNOS</strong></label><br><br>
+                <app-listado-user [view]='vista' (user)="setSeleccionado($event)"></app-listado-user>
+            </td>
+        </tr>
+    </table>
+</div>

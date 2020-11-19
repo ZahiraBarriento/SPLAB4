@@ -1,0 +1,15 @@
+<div class="register">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+        <label>Correo:</label>
+        <input type="email" formControlName="correo" name="correo"><br><br>
+        <label>Contraseña:</label>
+        <input type="password" formControlName="contrasenia" name="contrasenia"><br><br>
+        <label>Perfil:</label>
+        <select name="perfil" formControlName="perfil">
+            <option value="alumno">Alumno</option> 
+            <option value="profesor" selected>Profesor</option>
+          </select>
+        <br><br>
+        <button [disabled]="!registerForm.valid">Enviar</button>
+    </form>
+</div>

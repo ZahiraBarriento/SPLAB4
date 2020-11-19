@@ -1,0 +1,11 @@
+<div class="pagina">
+    <label><strong>Seleccione los usuarios que desea ver</strong></label><br><br>
+    <button (click)="show('profe')">PROFESORES</button>
+    <button (click)="show('alumno')">ALUMNOS</button>
+    <div *ngIf="profe">
+        <app-listado-user [accion]='accion' [view]='vista'></app-listado-user>
+    </div>
+    <div *ngIf="alumno">
+        <app-listado-user [view]='vista'></app-listado-user>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div *ngIf='view'>
+    <div *ngFor="let profe of profesores">
+        email: {{profe.email}}
+        <button *ngIf='accion' (click)="changeUser(profe)">Seleccionar</button><br>
+    </div>
+</div>
+<div *ngIf='!view'>
+    <div *ngFor="let alum of alumnos">
+        email: {{alum.email}}
+    </div>
+    <!--<p>Seleccione al alumno</p>
+    <p>
+        <select *ngFor="let alum of alumnos" name="alumnosSelect" multiple>
+            <option>{{alum.email}} </option>
+        </select>
+    </p>
+    <input (click)="enviar()" type="submit" value="Enviar">-->
+</div>

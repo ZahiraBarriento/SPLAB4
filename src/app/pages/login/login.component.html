@@ -1,0 +1,25 @@
+<div class="login">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+        <label>Correo:</label>
+        <input type="email" formControlName="correo" name="correo"><br><br>
+        <label>Contraseña:</label>
+        <input type="password" formControlName="contrasenia" name="contrasenia"><br><br>
+        <button [disabled]="!loginForm.valid">Enviar</button>
+    </form>
+    <br>
+    <label><strong>USUARIOS</strong></label><br>
+    <label>• Administrador: admin@gmail.com</label><br>
+    <label>• Alumno: maria@gmail.com</label><br>
+    <label>• Profesor:</label><br>
+    <label>carlos@gmail.com<br>juan@gmail.com</label><br><br>
+    <label><i>La contraseña de todos es: 12345678</i></label><br><br>
+
+    <label><strong>PUNTOS REALIZADOS</strong></label><br>
+    <label>• Punto 1: Completo</label><br>
+    <label>• Punto 2: Completo</label><br>
+    <label>• Punto 3/4: Completo</label><br>
+    <label>• Punto 5: A, B y E hechos</label><br>
+    <label>• Punto 6: Sin hacer</label><br>
+    <label>• Punto 7: A sin terminar, B sin hacer</label><br>
+</div>
+

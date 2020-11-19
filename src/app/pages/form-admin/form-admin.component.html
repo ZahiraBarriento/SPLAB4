@@ -1,0 +1,10 @@
+<div class="register">
+    <label>ALTA ADMINISTRADOR</label><br><br>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+        <label>Correo:</label>
+        <input type="email" formControlName="correo" name="correo"><br><br>
+        <label>Contraseña:</label>
+        <input type="password" formControlName="contrasenia" name="contrasenia"><br><br>
+        <button [disabled]="!registerForm.valid">Enviar</button>
+    </form>
+</div>

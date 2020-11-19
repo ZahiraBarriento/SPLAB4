@@ -1,0 +1,19 @@
+.link{
+  display: inline-block;
+  margin: 0 18px;
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+  }

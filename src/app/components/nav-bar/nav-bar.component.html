@@ -1,0 +1,23 @@
+<div class="toolbar" role="banner">
+  <nav style="margin:'3px';">
+    <div *ngIf="!user">
+      <a class="link" routerLink="login" routerLinkActive="active">Iniciar sesion</a>
+      <a class="link" routerLink="register" routerLinkActive="active">Registrarse</a>
+      <a class="link" routerLink="alta-admin" routerLinkActive="active">Administrador</a>
+    </div>
+    <div *ngIf="user">
+        <a class="link" routerLink="" routerLinkActive="active">Home</a>
+        <a class="link" routerLink="alta-materia" routerLinkActive="active">Alta materia</a>
+        <a class="link" routerLink="inscripcion" routerLinkActive="active">Inscripcion</a>
+        <a class="link" routerLink="listado" routerLinkActive="active">Listado Usuarios</a>
+        <a class="link" routerLink="materias-cargo" routerLinkActive="active">Materias a cargo</a>
+        <a class="link" (click)="onSingUp()">Cerrar sesion</a>
+      </div>
+    </nav>
+    <div *ngIf="user">
+      <app-view-email></app-view-email>
+    </div>
+  </div>
+<div class="card-container">
+  <router-outlet></router-outlet>
+</div>

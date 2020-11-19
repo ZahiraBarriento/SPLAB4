@@ -1,0 +1,11 @@
+<label><strong>LISTADO DE MATERIAS</strong></label><br><br>
+<div *ngFor="let mate of materias">
+    <div>
+        Nombre: {{mate.name}}<br>
+        Cuatrimestre: {{mate.quarter}}<br>
+        Año: {{mate.year}}<br>
+        Cupones: {{mate.cuopons}}<br>
+        Profesor: {{mate.profesor.email}}<br>
+    </div>
+    <br>
+</div>

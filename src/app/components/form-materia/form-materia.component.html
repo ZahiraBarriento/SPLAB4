@@ -1,0 +1,15 @@
+<div class="materia">
+    <form [formGroup]="materiaForm" (ngSubmit)="onSubmitMateria()">
+        <label>Nombre materia:</label>
+        <input type="text" formControlName="name"><br><br>
+        <label>Cuatrimestre:</label>
+        <input type="number" formControlName="quarter" min="1" max="2"><br><br>
+        <label>Cupo alumnos:</label>
+        <input type="number" formControlName="coupons" min="1"><br><br>
+        <label>Año:</label>
+        <input type="number" formControlName="year" min="2000" max="2020"><br><br>
+        <label>Profesor: {{correo}}</label>
+        <app-listado-user [accion]='vista' [view]='vista' (user)="setSeleccionado($event)"></app-listado-user>
+        <button [disabled]="(!materiaForm.valid || !professorMateria)">Enviar</button>
+    </form>
+</div>
